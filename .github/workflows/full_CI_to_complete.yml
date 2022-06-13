@@ -26,7 +26,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   run_Tests_UAT:
-    needs: sonarcloud
+    needs: Build
     name: Run_Tests_UAT
     runs-on: ubuntu-latest
     steps:
